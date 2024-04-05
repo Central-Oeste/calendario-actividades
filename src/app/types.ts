@@ -3,6 +3,6 @@ export interface Restaurant {
   name: string;
   image: string;
   description: string;
-  score: number;
-  ratings: number;
+  score: string;
+  ratings: string;
 }

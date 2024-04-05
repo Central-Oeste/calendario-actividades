@@ -51,8 +51,8 @@ export default async function RestaurantPage({params: {id}}: {params: {id: strin
           <p className="pt-3 opacity-90">{product.description}</p>
         </div>
         <div className="inline-flex gap-1 pt-3">
-          <span>📅 {product.score}</span>
-          <span className="font-normal opacity-75">- Desde las {product.ratings}</span>
+          <span>📅 {product.score} de febrero</span>
+          <span className="font-normal opacity-75">- Desde las {product.ratings} hs</span>
         </div>
         <div className="pt-3">
           <span>📍 {product.address}</span>
