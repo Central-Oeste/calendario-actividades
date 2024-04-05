@@ -36,6 +36,7 @@
 .container_card {
   background-color: blue;
   border-radius: 8px;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.438);
 }
 
 .img_contain {
@@ -111,6 +112,7 @@
 .btn_evento{
   background-color: white;
   color: blue;
-  padding: 5px 20px;
-  border-radius: 3px;
+  padding: 5px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
