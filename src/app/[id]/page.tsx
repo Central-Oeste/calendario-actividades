@@ -4,24 +4,24 @@ import Link from "next/link";
 import api from "@/api";
 
 export async function generateMetadata({params: {id}}: {params: {id: string}}) {
-  const product = await api.fetch(id);
+  const evento = await api.fetch(id);
 
   return {
-    title: `${product.name} - Comunidad`,
-    description: product.description,
+    title: `${evento.name} - Comunidad`,
+    description: evento.description,
   };
 }
 
 export async function generateStaticParams() {
-  const products = await api.list();
+  const evento = await api.list();
 
-  return products.map((product) => ({
-    id: product.id,
+  return evento.map((evento) => ({
+    id: evento.id,
   }));
 }
 
 export default async function RestaurantPage({params: {id}}: {params: {id: string}}) {
-  const product = await api.fetch(id);
+  const evento = await api.fetch(id);
 
   return (
     <div>
@@ -31,31 +31,31 @@ export default async function RestaurantPage({params: {id}}: {params: {id: strin
         </Link>
       </div>
 
-      <article key={product.id}>
+      <article key={evento.id}>
         <div
           className="img_contain"
           style={{
-            backgroundImage: `url(${product.image})`,
+            backgroundImage: `url(${evento.image})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             opacity: ".5px",
           }}
         >
-          <img alt={product.name} className="style_img_detalle" src={product.image} />
+          <img alt={evento.name} className="style_img_detalle" src={evento.image} />
         </div>
 
         <div className="pt-3">
           <h2 className="inline-flex gap-2 text-lg font-bold">
-            <span>{product.name}</span>
+            <span>{evento.name}</span>
           </h2>
-          <p className="pt-3 opacity-90">{product.description}</p>
+          <div dangerouslySetInnerHTML={{__html: evento.description}} className="pt-3" />
         </div>
         <div className="inline-flex gap-1 pt-3">
-          <span>📅 {product.score} de febrero</span>
-          <span className="font-normal opacity-75">- Desde las {product.ratings} hs</span>
+          <span>📅 {evento.score} de febrero</span>
+          <span className="font-normal opacity-75">- Desde las {evento.ratings}</span>
         </div>
         <div className="pt-3">
-          <span>📍 {product.address}</span>
+          <span>📍 {evento.address}</span>
         </div>
       </article>
     </div>

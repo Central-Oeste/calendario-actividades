@@ -116,3 +116,15 @@
   border-radius: 20px;
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
+
+.subtitulo{
+  font-weight: bold;
+}
+
+.espacio{
+  padding: 8px 0px;
+}
+
+.espacio2{
+  padding: 2px 8px ;
+}

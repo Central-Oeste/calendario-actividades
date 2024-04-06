@@ -1,8 +1,8 @@
-import type {Restaurant} from "../app/types";
+import type {Evento} from "../app/types";
 
 import {useState, useEffect} from "react";
 
-export default function FavoriteButton({restaurant}: {restaurant: Restaurant}) {
+export default function FavoriteButton({evento}: {evento: Evento}) {
   const [isFavourite, setIsFavourite] = useState<boolean>(false);
 
   // Cargar el estado inicial del botón al cargar la página
@@ -10,34 +10,34 @@ export default function FavoriteButton({restaurant}: {restaurant: Restaurant}) {
     const favorites = window.localStorage.getItem("favorites");
 
     if (favorites) {
-      const isRestaurantFavourite = favorites.includes(restaurant.id);
+      const isEventoFavourite = favorites.includes(evento.id);
 
-      setIsFavourite(isRestaurantFavourite);
+      setIsFavourite(isEventoFavourite);
     }
-  }, [restaurant.id]);
+  }, [evento.id]);
 
   // Función para manejar el clic en el botón de favoritos
   const handleFavoriteClick = () => {
     const favorites = window.localStorage.getItem("favorites");
 
     if (favorites) {
-      const isRestaurantFavourite = favorites.includes(restaurant.id);
+      const isEventoFavourite = favorites.includes(evento.id);
 
       // Actualizar estado y localStorage dependiendo del estado actual
-      if (isRestaurantFavourite) {
-        const updatedFavorites = favorites.replace(restaurant.id, "");
+      if (isEventoFavourite) {
+        const updatedFavorites = favorites.replace(evento.id, "");
 
         window.localStorage.setItem("favorites", updatedFavorites);
         setIsFavourite(false);
       } else {
-        const updatedFavorites = favorites.concat(restaurant.id);
+        const updatedFavorites = favorites.concat(evento.id);
 
         window.localStorage.setItem("favorites", updatedFavorites);
         setIsFavourite(true);
       }
     } else {
-      // Si no hay favoritos, agregar este restaurante como favorito
-      window.localStorage.setItem("favorites", restaurant.id);
+      // Si no hay favoritos, agregar este evento como favorito
+      window.localStorage.setItem("favorites", evento.id);
       setIsFavourite(true);
     }
   };

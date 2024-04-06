@@ -1,4 +1,4 @@
-export interface Restaurant {
+export interface Evento {
   id: string;
   name: string;
   image: string;

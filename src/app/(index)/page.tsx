@@ -1,10 +1,10 @@
 import {redirect} from "next/navigation";
 
 import api from "@/api";
-import RestaurantCard from "@/components/RestaurantCard";
+import EventoCard from "@/components/EventoCard";
 
 export default async function HomePage({searchParams}: {searchParams: {q: string}}) {
-  const restaurants = await api.search(searchParams.q);
+  const eventos = await api.search(searchParams.q);
 
   async function searchAction(formData: FormData) {
     "use server";
@@ -21,8 +21,8 @@ export default async function HomePage({searchParams}: {searchParams: {q: string
         </button>
       </form>
       <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        {restaurants.map((restaurant) => {
-          return <RestaurantCard key={restaurant.id} restaurant={restaurant} />;
+        {eventos.map((evento) => {
+          return <EventoCard key={evento.id} evento={evento} />;
         })}
       </section>
     </div>
