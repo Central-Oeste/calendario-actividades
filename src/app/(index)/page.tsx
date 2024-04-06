@@ -20,7 +20,7 @@ export default async function HomePage({searchParams}: {searchParams: {q: string
           Buscar
         </button>
       </form>
-      <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-4">
         {eventos.map((evento) => {
           return <EventoCard key={evento.id} evento={evento} />;
         })}

@@ -14,6 +14,20 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(218, 227, 230);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,137,172,1);
+  border-radius: 10px;
+}
+
+
 .container_header {
   background-color: #F4F4F4;
   display: flex;
@@ -127,4 +141,10 @@
 
 .espacio2{
   padding: 2px 8px ;
+}
+
+.btn_fav{
+  position: absolute;
+  margin-left: 10px;
+  font-size: 20px;
 }

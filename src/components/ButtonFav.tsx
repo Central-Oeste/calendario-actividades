@@ -44,7 +44,7 @@ export default function FavoriteButton({evento}: {evento: Evento}) {
 
   return (
     <button
-      className={`text-xl ${isFavourite ? "text-red-500" : "opacity-20"}`}
+      className={`btn_fav text-xl ${isFavourite ? "text-red-500" : "opacity-100"}`}
       type="button"
       onClick={handleFavoriteClick}
     >
