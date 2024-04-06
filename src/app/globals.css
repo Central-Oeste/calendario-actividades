@@ -74,7 +74,7 @@
 
 
 .container_text {
-  padding: 10px 20px 20px 20px;
+  padding: 15px 20px;
   transition: 0.5s;
   color: #cac7c7;
 }
@@ -147,4 +147,8 @@
   position: absolute;
   margin-left: 10px;
   font-size: 20px;
+}
+
+.font-normal{
+  font-size: 14px;
 }

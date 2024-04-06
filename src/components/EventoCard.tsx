@@ -20,13 +20,13 @@ export default function EventoCard({evento}: {evento: Evento}) {
       <img alt={evento.name} className="style_img" src={evento.image} />
 
       <div className="container_text">
-        <h2 className="inline-flex gap-2 text-lg font-bold">
+        <h2 className="text-md inline-flex font-bold">
           <span>{evento.name}</span>
-          <small className="inline-flex gap-1" />
+          <small className="inline-flex" />
         </h2>
 
         <div className="pt-3">
-          <span>📅 {evento.score}</span>
+          <span className="font-normal">📅 {evento.score}</span>
           <span className="font-normal opacity-75"> - Desde las {evento.ratings}</span>
         </div>
         <Link key={evento.id} prefetch href={`/${evento.id}`}>
