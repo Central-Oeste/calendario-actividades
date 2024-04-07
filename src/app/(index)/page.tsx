@@ -12,6 +12,7 @@ export default async function HomePage({searchParams}: {searchParams: {q: string
       <div className="inline-flex">
         <form
           className="mb-4 inline-flex gap-2"
+          method="POST"
           onSubmit={(event) => {
             event.preventDefault();
             searchAction(new FormData(event.currentTarget));
@@ -24,6 +25,7 @@ export default async function HomePage({searchParams}: {searchParams: {q: string
         </form>
         <form
           className="mx-4 mb-4 inline-flex gap-2"
+          method="POST"
           onSubmit={(event) => {
             event.preventDefault();
             searchAction(new FormData(event.currentTarget));
