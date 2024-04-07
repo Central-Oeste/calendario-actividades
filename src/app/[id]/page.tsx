@@ -57,6 +57,9 @@ export default async function RestaurantPage({params: {id}}: {params: {id: strin
         <div className="pt-3">
           <span>📍 {evento.address}</span>
         </div>
+        <div className="container_btn_evento pt-3">
+          <button className="btn_evento2"> ¡ANOTATE AHORA! </button>
+        </div>
       </article>
     </div>
   );

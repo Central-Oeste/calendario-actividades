@@ -23,7 +23,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,137,172,1);
+  background: #454446;
   border-radius: 10px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .container_card {
-  background-color: blue;
+  background: linear-gradient(110deg,#0089ac 60%,#0087ac80);
   border-radius: 8px;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.438);
 }
@@ -76,11 +76,9 @@
 .container_text {
   padding: 15px 20px;
   transition: 0.5s;
-  color: #cac7c7;
-}
-
-.container_text:hover {
-  color: #ffffff;
+  color: white;
+  letter-spacing: 0.5px;
+  font-weight: normal;
 }
 
 .contain_btn_back {
@@ -125,10 +123,33 @@
 
 .btn_evento{
   background-color: white;
-  color: blue;
+  color: #364761;
   padding: 5px 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.075);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn_evento:hover{
+  background-color: rgb(123, 167, 37);
+  color: #ffffff;
+  transition: .5s;
+  font-weight: 300;
+}
+
+.btn_evento2{
+  background-color: rgb(123, 167, 37);
+  color: white;
+  padding: 5px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.034);
+  font-weight: 300;
+  font-size: 14px;
+}
+.btn_evento2:hover{
+  background-color: #2c2a30;
+  transition: .5s;
 }
 
 .subtitulo{
@@ -151,4 +172,19 @@
 
 .font-normal{
   font-size: 14px;
+}
+
+.contain_center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.error_text{
+  font-size: 30px;
+  font-weight: bold;
+  color: brown;
+  letter-spacing: 1px;
 }

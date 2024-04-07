@@ -20,7 +20,7 @@ export default function EventoCard({evento}: {evento: Evento}) {
       <img alt={evento.name} className="style_img" src={evento.image} />
 
       <div className="container_text">
-        <h2 className="text-md inline-flex font-bold">
+        <h2 className="text-md inline-flex">
           <span>{evento.name}</span>
           <small className="inline-flex" />
         </h2>
@@ -31,9 +31,7 @@ export default function EventoCard({evento}: {evento: Evento}) {
         </div>
         <Link key={evento.id} prefetch href={`/${evento.id}`}>
           <div className="container_btn_evento pt-3">
-            <button className="btn_evento">
-              <b>VER EVENTO</b>
-            </button>
+            <button className="btn_evento"> VER EVENTO </button>
           </div>
         </Link>
       </div>

@@ -16,7 +16,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <body className="container m-auto grid min-h-screen grid-rows-[auto,1fr,auto]">
         <header className="container_header text-xl font-bold leading-[3rem]">
           <Link href="/">
-            <h2 className="title_restaurancy">📆 Calendario de Actividades</h2>
+            <h2 className="title_restaurancy ms-1">
+              📆 Calendario de Actividades - Comunidad Central Más
+            </h2>
           </Link>
         </header>
 
