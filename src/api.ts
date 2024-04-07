@@ -70,12 +70,12 @@ const api = {
     return evento;
   },
 
-  search: async (query: string): Promise<Evento[]> => {
+  search: async (q: string): Promise<Evento[]> => {
     const results = await api.list().then((eventos) =>
       eventos.filter((evento) => {
         const eventName = evento.name || "";
         const eventScore = evento.score || "";
-        const lowercaseQuery = query || "";
+        const lowercaseQuery = q || "";
 
         return (
           (typeof eventName === "string" &&
@@ -93,44 +93,6 @@ const api = {
 
     return results;
   },
-
-  // search: async (query: string): Promise<Evento[]> => {
-  //   const results = await api.list().then((eventos) =>
-  //     eventos.filter((evento) => {
-  //       const eventotName = evento.name || "";
-  //       const lowercaseQuery = query || "";
-
-  //       return (
-  //         typeof eventotName === "string" &&
-  //         typeof lowercaseQuery === "string" &&
-  //         eventotName.toLowerCase().includes(lowercaseQuery.toLowerCase())
-  //       );
-  //     }),
-  //   );
-
-  //   if (results.length === 0) {
-  //     throw new Error(`No Matching resutls`);
-  //   }
-
-  //   return results;
-  // },
-
-  // searchByDate: async (query: string): Promise<Evento[]> => {
-  //   const results = await api.list().then((eventos) =>
-  //     eventos.filter((evento) => {
-  //       const score = evento.score || "";
-  //       const lowercaseQuery = query.toLowerCase();
-
-  //       return typeof score === "string" && score.toLowerCase().includes(lowercaseQuery);
-  //     }),
-  //   );
-
-  //   if (results.length === 0) {
-  //     throw new Error(`No Matching results`);
-  //   }
-
-  //   return results;
-  // },
 };
 
 function parseCsvRow(row: string): string[] {

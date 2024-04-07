@@ -12,26 +12,24 @@ export default async function HomePage({searchParams}: {searchParams: {q: string
       <div className="inline-flex">
         <form
           className="mb-4 inline-flex gap-2"
-          method="POST"
-          onSubmit={(event) => {
+          onSubmit={async (event) => {
             event.preventDefault();
-            searchAction(new FormData(event.currentTarget));
+            await searchAction(new FormData(event.currentTarget));
           }}
         >
-          <input className="search_style px-2" defaultValue={searchParams.q || ""} name="query" />
+          <input className="search_style px-2" defaultValue={searchParams.q || ""} name="q" />
           <button className="search_btn_style p-2" type="submit">
             Buscar
           </button>
         </form>
         <form
           className="mx-4 mb-4 inline-flex gap-2"
-          method="POST"
-          onSubmit={(event) => {
+          onSubmit={async (event) => {
             event.preventDefault();
-            searchAction(new FormData(event.currentTarget));
+            await searchAction(new FormData(event.currentTarget));
           }}
         >
-          <select className="search_style px-2" defaultValue={searchParams.q || ""} name="query">
+          <select className="search_style px-2" defaultValue={searchParams.q || ""} name="q">
             <option value="">Selecciona un mes</option>
             <option value="enero">Enero</option>
             <option value="febrero">Febrero</option>

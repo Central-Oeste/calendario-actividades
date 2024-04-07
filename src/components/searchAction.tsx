@@ -2,5 +2,6 @@
 import {redirect} from "next/navigation";
 
 export async function searchAction(formData: FormData) {
-  redirect(`/?q=${formData.get("query")}`);
+  "use server";
+  redirect(`/?q=${formData.get("q")}`);
 }
