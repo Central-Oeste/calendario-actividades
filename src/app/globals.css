@@ -162,6 +162,10 @@
   font-weight: bold;
 }
 
+.link{
+  color: #0089ac;
+}
+
 .espacio{
   padding: 8px 0px;
 }
