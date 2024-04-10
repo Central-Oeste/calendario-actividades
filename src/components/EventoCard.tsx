@@ -26,8 +26,8 @@ export default function EventoCard({evento}: {evento: Evento}) {
         </h2>
 
         <div className="pt-3">
-          <span className="font-normal">📅 {evento.score}</span>
-          <span className="font-normal opacity-75"> - Desde las {evento.ratings}</span>
+          <span className="font-normal">📅 {evento.hora}</span>
+          <span className="font-normal opacity-75"> - Desde las {evento.fecha}</span>
         </div>
         <Link key={evento.id} prefetch href={`/${evento.id}`}>
           <div className="container_btn_evento pt-3">

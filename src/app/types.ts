@@ -3,6 +3,7 @@ export interface Evento {
   name: string;
   image: string;
   description: string;
-  score: string;
-  ratings: string;
+  fecha: string;
+  hora: string;
+  url: string;
 }

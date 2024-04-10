@@ -4,8 +4,9 @@ interface Evento {
   image: string;
   description: string;
   address: string;
-  score: string;
-  ratings: string;
+  fecha: string;
+  hora: string;
+  url: string;
 }
 
 const api = {
@@ -25,9 +26,10 @@ const api = {
         name: values[1],
         description: values[2],
         address: values[3],
-        score: values[4],
-        ratings: values[5],
+        fecha: values[4],
+        hora: values[5],
         image: values[6],
+        url: values[7],
       };
     });
 
@@ -55,9 +57,10 @@ const api = {
         name: values[1],
         description: values[2],
         address: values[3],
-        score: values[4],
-        ratings: values[5],
+        fecha: values[4],
+        hora: values[5],
         image: values[6],
+        url: values[7],
       };
     });
 
@@ -74,14 +77,14 @@ const api = {
     const results = await api.list().then((eventos) =>
       eventos.filter((evento) => {
         const eventName = evento.name || "";
-        const eventScore = evento.score || "";
+        const eventFecha = evento.fecha || "";
         const lowercaseQuery = q || "";
 
         return (
           (typeof eventName === "string" &&
             eventName.toLowerCase().includes(lowercaseQuery.toLowerCase())) ||
-          (typeof eventScore === "string" &&
-            eventScore.toLowerCase().includes(lowercaseQuery.toLowerCase()))
+          (typeof eventFecha === "string" &&
+            eventFecha.toLowerCase().includes(lowercaseQuery.toLowerCase()))
         );
       }),
     );

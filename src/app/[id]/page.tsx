@@ -51,14 +51,16 @@ export default async function RestaurantPage({params: {id}}: {params: {id: strin
           <div dangerouslySetInnerHTML={{__html: evento.description}} className="pt-3" />
         </div>
         <div className="inline-flex gap-1 pt-3">
-          <span>📅 {evento.score} de febrero</span>
-          <span className="font-normal opacity-75">- Desde las {evento.ratings}</span>
+          <span>📅 {evento.fecha} de febrero</span>
+          <span className="font-normal opacity-75">- Desde las {evento.hora}</span>
         </div>
         <div className="pt-3">
           <span>📍 {evento.address}</span>
         </div>
         <div className="container_btn_evento pt-3">
-          <button className="btn_evento2"> ¡ANOTATE AHORA! </button>
+          <a className="btn_evento2" href={evento.url} rel="noopener" target="_blank">
+            ¡ANOTATE AHORA!
+          </a>
         </div>
       </article>
     </div>
