@@ -22,7 +22,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </Link>
         </header>
 
-        <main className="px-0 py-8">{children}</main>
+        <main className="px-2 py-8">{children}</main>
 
         <footer className="text-center leading-[3rem] opacity-70">
           © {new Date().getFullYear()} Farmacias Central Oeste

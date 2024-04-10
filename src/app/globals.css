@@ -98,7 +98,6 @@
   background-color: #454446;
 }
 
-
 .search_style{
   background-color: #F4F4F4;
   border-radius: 3px;
@@ -118,7 +117,14 @@
 }
 
 .inline-flex{
-  align-items: start;
+  align-items: flex-start;
+}
+
+.container-filters{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .btn_evento{
