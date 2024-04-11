@@ -198,3 +198,7 @@
   color: brown;
   letter-spacing: 1px;
 }
+
+.disabled{
+  display: none;
+}

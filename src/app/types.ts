@@ -6,4 +6,5 @@ export interface Evento {
   fecha: string;
   hora: string;
   url: string;
+  visibilidad: string;
 }
