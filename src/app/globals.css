@@ -74,11 +74,15 @@
 
 
 .container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
   padding: 15px 20px;
   transition: 0.5s;
   color: white;
   letter-spacing: 0.5px;
   font-weight: normal;
+  min-height: 190px;
 }
 
 .contain_btn_back {

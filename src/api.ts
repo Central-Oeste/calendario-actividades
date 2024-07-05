@@ -5,7 +5,6 @@ interface Evento {
   description: string;
   address: string;
   fecha: string;
-  hora: string;
   url: string;
   visibilidad: string;
 }
@@ -28,10 +27,9 @@ const api = {
         description: values[2],
         address: values[3],
         fecha: values[4],
-        hora: values[5],
-        image: values[6],
-        url: values[7],
-        visibilidad: values[8],
+        image: values[5],
+        url: values[6],
+        visibilidad: values[7],
       };
     });
 
@@ -60,10 +58,9 @@ const api = {
         description: values[2],
         address: values[3],
         fecha: values[4],
-        hora: values[5],
-        image: values[6],
-        url: values[7],
-        visibilidad: values[8],
+        image: values[5],
+        url: values[6],
+        visibilidad: values[7],
       };
     });
 

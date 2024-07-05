@@ -15,7 +15,7 @@ const DynamicFavoriteButton = dynamic(async () => FavoriteButton, {
 
 export default function EventoCard({evento}: {evento: Evento}) {
   return (
-    <article key={evento.id} className={`container_card ${evento.visibilidad}`}>
+    <article key={evento.id} className="container_card">
       <DynamicFavoriteButton evento={evento} />
       <img alt={evento.name} className="style_img" src={evento.image} />
 
@@ -26,8 +26,7 @@ export default function EventoCard({evento}: {evento: Evento}) {
         </h2>
 
         <div className="pt-3">
-          <span className="font-normal">📅 {evento.fecha}</span>
-          <span className="font-normal opacity-75"> - Desde las {evento.hora}</span>
+          <span className="font-normal opacity-75">📅 {evento.fecha}</span>
         </div>
         <Link key={evento.id} prefetch href={`/${evento.id}`}>
           <div className="container_btn_evento pt-3">
