@@ -4,7 +4,6 @@ export interface Evento {
   image: string;
   description: string;
   fecha: string;
-  hora: string;
   url: string;
   visibilidad: string;
 }
